@@ -1,18 +1,28 @@
+/* Remove pre-existing padding and margin from body */
 body {
   padding: 0;
   margin: 0;
 }
 
+/* Added padding and border for visualisation whilst styling/constructing */
 div {
   border: 1px solid black;
   padding: 1rem;
 }
 
-div.userName {
-  display: flex;
-  justify-content: space-evenly;
+/* Want the banner to occupy the full width of screen, grey to see it */
+.projectBanner {
+  width: 100%;
+  background-color: grey;
 }
 
+.userName {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Flex container to have everything easily manipulatable */
 .container {
   display: flex;
   flex-direction: column;
@@ -23,6 +33,7 @@ div.userName {
   font-size: 1rem;
 }
 
+/* Sample styling for buttons, just placeholder for now but serves as a basis for later */
 .button {
   display: inline-block;
   padding: 10px 20px;
