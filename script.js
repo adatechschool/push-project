@@ -1,20 +1,20 @@
+//Store authentification variables
+function getValue () {
+    var userName = document.getElementById("name").value;
+    var limit = document.getElementById("nbOfSticks").value;
+    document.getElementById("userName").innerText = "Welcome back " + userName;
+    document.getElementById("limit").innerText += " "+ limit;
+    document.getElementById("counter").innerText = `Running Counter : ${counter}`;
+}
+
+
 //Declaration of the main variables and initialization 
-let myName;
+let userName;
 let limit;
 let counter = 0;
 let unitStickPrice = 0.58;
 let moneyBox = 0;
 let dataBase = [];
-initialization();
-
-//function to inititalize the account
-function initialization () {
-    myName = window.prompt("Comment t'appelles-tu ?");
-    limit = window.prompt("Combien de cigarettes fumes-tu par jour ?");
-    document.getElementById("userName").innerText = "Welcome back " + myName;
-    document.getElementById("limit").innerText += " "+ limit;
-    document.getElementById("counter").innerText = `Running Counter : ${counter}`;
-}
 
 //Event listener to increase by 1 the counter when the user click on the button "counterBtn" and update the database
 const counterButton = document.getElementById("counterBtn");
