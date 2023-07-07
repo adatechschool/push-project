@@ -7,17 +7,9 @@
     <title>Projet Mehdi-Bradley-Quentin</title>
   </head>
   <body>
-
-    <label for="name">Comment t'appelles-tu ?</label>
-    <input type="text" id="name">
-
-    <label for="nbOfSticks">Combien de cigarettes fumes-tu par jour ?</label>
-    <input type="number" id="nbOfSticks" min="0">
-
-    <button type="button" onclick="getValue();">Je valide !</button>
     <div class="container">
       <div class="projectBanner">
-        <img class="logo" src="img/LogoProjetPush.png">
+        <img class="logo" src="/img/LogoProjetPush.png">
       </div>
       <div class="userName">
         <h2 id="userName">UserName</h2>
@@ -33,11 +25,10 @@
         <button id="counterBtn" class="button">+</button>
       </div>
       <div>
-        <div>
-          <button id="reductionBtn" class="button">-</button>
-        </div>
-        <div><button class="button">Cagnotte/Historique</button></div>
+        <button id="reductionBtn" class="button">-</button>
       </div>
+      <br>
+      <button class="button"><a href="reward.html" style="text-decoration:none">Cagnotte</a></button>
     </div>
     <script src="script.js"></script>
   </body>
