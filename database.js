@@ -1,6 +1,6 @@
 //function to create a new user and store it in baserow
 async function createAccount() {
-  user = await fetch("https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true", {
+  let user = await fetch("https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true", {
     method:"POST",
     headers: {
       "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
@@ -25,7 +25,7 @@ async function createAccount() {
 async function connexion () {
       let email = document.getElementById("connexionEmail").value;
       let password = document.getElementById("connexionPassword").value;
-      user = await fetch(`https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true&filter__field_1154427__equal=${email}&filter__field_1195631__equal=${password}`, {
+      let user = await fetch(`https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true&filter__field_1154427__equal=${email}&filter__field_1195631__equal=${password}`, {
         method: "GET",
         headers: {
           "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
