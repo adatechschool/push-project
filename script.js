@@ -1,7 +1,7 @@
-window.onload = () => {
-      let user = JSON.parse(localStorage.getItem("user"));
-      console.log(user);
+let user = JSON.parse(localStorage.getItem("user"));
+console.log(user);
 
+window.onload = () => {
       //Display user informations
       document.getElementById("userName").innerText = "Welcome back " + user.name;
       document.getElementById("limit").innerText += " " + user.nbOfSticks;
@@ -46,6 +46,8 @@ window.onload = () => {
       }
       );
 
+};
+
       // function to increment the money box each day regarding the daily counter
       runAtSpecificTimeOfDay(00,01,async () => {
         let saving = 0;
@@ -85,7 +87,7 @@ window.onload = () => {
         }, eta_ms);
       }
 
-};
+
 
 
 //  //function to fill the money box if the user smoked less sticks than he used to.
