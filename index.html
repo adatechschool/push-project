@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Projet Mehdi-Bradley-Quentin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <title>Push</title>
     <script src="./script.js"></script>   
   </head>
   <body>
@@ -14,14 +17,18 @@
       </div>
       <div class="userName">
         <h2 id="userName">Coucou !</h2>
-        <button class="button">. . .</button>
       </div>
-      <div class="objeciveLimit">
-        <h3 id="limit">Limit :</h3>
+      <div class="parameters">
+        <div>
+          <h3>Ma conso d'avant</h3>
+          <p id="limit"></p>
+        </div>
+        <div>
+          <h3>Aujourd'hui</h3>
+          <p id="counter"></p>
+        </div>
       </div>
-      <div class="clickCounter">
-        <h3 id="counter">Counter :</h3>
-      </div>
+
       <div class="ellipse1">
         <div class="ellipse2">
           <div class="ellipse3">
@@ -32,15 +39,12 @@
       
       <div class="ellipse4">
         <div class="ellipse5">
-          <div class="ellipse6">
             <button id="reductionBtn" class="button">-</button>
-          </div>
         </div>
       </div>
 
-      <br />
-      <button class="button">
-        <a href="reward.html" style="text-decoration: none">Cagnotte</a>
+      <button class="navigation">
+        <a href="reward.html" style="text-decoration: none">$</a>
       </button>
     </div>
   </body>

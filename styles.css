@@ -1,19 +1,21 @@
-/* Remove pre-existing padding and margin from body, display "flex" "column" to center the application in the center of the screen  */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 0;
-  margin: 0;
-  width: 390px;
-height: 844px;
-}
+
 
 /* Added padding and border for visualisation whilst styling/constructing */
 div {
   border: 1px solid black;
   padding: 1rem;
+}
+
+/* Flex container to have everything easily manipulatable */
+.container {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-family: 'Teko', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5a124;
+  width: 390px;
+  height: 844px;
 }
 
 /* Want the banner to occupy the full width of screen, grey to see it, border "none" to remove the border*/
@@ -38,31 +40,40 @@ div {
 }
 
 .userName {
+  font-size: 30px;
+  margin-top: -10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-style: none;
 }
 /* border "none" to remove the border*/
-.objeciveLimit {
+.parameters {
+  color:white;
+  margin-top: -70px;
+  margin-left: -20px;
+  display:flex;
+  font-size: 20px;
   border-style: none;
+  justify-content:space-evenly;
+  align-items: center;
 }
-/* border "none" to remove the border*/
-.clickCounter {
+.parameters div {
+  margin-top: -20px;
   border-style: none;
+  font-size: 30px;
 }
 
-/* Flex container to have everything easily manipulatable */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.parameters div p {
+  margin-top: -30px;
+  display : flex;
   justify-content: center;
-  background-color: #e5a124;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1rem;
-  width: 20em;
+  color:white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif
 }
+
+
 
 /* Sample styling for buttons, just placeholder for now but serves as a basis for later */
 .button {
@@ -104,11 +115,13 @@ div {
 }
 
 .ellipse1 {
+  margin-left: 48px;
+  margin-top:-50px;
   align-items: center;
   justify-content: center;
   display : flex;
-  width: 300px;
-height: 300px;
+  width: 250px;
+height: 250px;
 border-radius: 100%;
 background: #6D5623;
 }
@@ -136,13 +149,13 @@ background: #313123;
 #reductionBtn {
   align-items: center;
   justify-content: center;
+  text-align: center;
   display : flex;
   color: black;
-  font-size: 5px;
+  font-size: 50px;
   border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
   background-color: #D9D9D9;
 }
 
@@ -150,8 +163,8 @@ background: #313123;
   align-items: center;
   justify-content: center;
   display : flex;
-  width: 30px;
-height: 30px;
+  width: 100px;
+height: 100px;
 border-radius: 100%;
 background: #6D5623;
 }
@@ -160,18 +173,76 @@ background: #6D5623;
   align-items: center;
   justify-content: center;
   display : flex;
-  width: 20px;
-  height: 20px;
+  width: 66px;
+  height: 66px;
   border-radius: 100%;
 background: #313123;
 }
 
-.ellipse6 {
+.navigation {
+  display:flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  display : flex;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: #141F23;
+  font-size:30px;
+  color:black;
+  margin-left: 330px;
+  margin-top: 50px;
+  border: 5px solid #000;
+  background: white;
+  width: 50px;
+  height: 50px;
 }
+
+
+/* CSS for authentifcation page */
+
+.form {
+  text-align: center;
+  color:black;
+  border: none;
+}
+
+#signup {
+  margin-top: 30px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+#login {
+  margin-top: 40px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+.field-wrap {
+  display: flex;
+  border: none;
+}
+
+input {
+  margin-top: -20px;
+  display: flex;
+  background-color: #f4efe6;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height:30px;
+  align-items: center;
+}
+
+.loginButton {
+  margin-right: -190px;
+  width: 100px;
+  background-color: #e5a124;
+  border-color: #f4efe6;
+  border-radius: 5px;
+  height: 30px;
+}
+

@@ -1,11 +1,14 @@
-let user = JSON.parse(localStorage.getItem("user"));
-console.log(user);
+
 
 window.onload = () => {
+
+      let user = JSON.parse(localStorage.getItem("user"));
+      console.log(user);
+      
       //Display user informations
       document.getElementById("userName").innerText = "Welcome back " + user.name;
-      document.getElementById("limit").innerText += " " + user.nbOfSticks;
-      document.getElementById("counter").innerText = "Counter : " + user.counter;
+      document.getElementById("limit").innerHTML = `${user.nbOfSticks}`;
+      document.getElementById("counter").innerHTML = `${user.counter}`;
 
 
       //Event listener to increase by 1 the counter when the user click on the button "counterBtn" and update the database
@@ -23,7 +26,7 @@ window.onload = () => {
         })
         .then(response => response.json())
         .then( result => localStorage.setItem("user",JSON.stringify(result)));
-        document.getElementById("counter").innerText = "Counter : " + JSON.parse(localStorage.getItem("user")).counter;
+        document.getElementById("counter").innerHTML = JSON.parse(localStorage.getItem("user")).counter;
       }
       );
 
@@ -42,7 +45,7 @@ window.onload = () => {
         })
         .then(response => response.json())
         .then( result => localStorage.setItem("user",JSON.stringify(result)));
-        document.getElementById("counter").innerText = "Counter : " + JSON.parse(localStorage.getItem("user")).counter;
+        document.getElementById("counter").innerHTML = JSON.parse(localStorage.getItem("user")).counter;
       }
       );
 
