@@ -18,7 +18,7 @@ async function createAccount() {
   })
     .then( response => response.json())
     localStorage.setItem("user",JSON.stringify(user));
-    document.location.href="index.html"
+    document.location.href="main.html"
 }
 
 //function to log in
@@ -34,5 +34,5 @@ async function connexion () {
         .then(response => response.json())
         .then(result => result.results[0])
         localStorage.setItem("user",JSON.stringify(user));
-        document.location.href="index.html"
+        document.location.href="main.html"
 }
