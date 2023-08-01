@@ -51,27 +51,8 @@ window.onload = () => {
 
 };
 
-      // function to increment the money box each day regarding the daily counter
-      runAtSpecificTimeOfDay(00,01,async () => {
-        let saving = 0;
-        if (Number(user.counter) <= Number(user.nbOfSticks)) {
-          saving = Math.round((Number(user.nbOfSticks)-Number(user.counter))*0.58);
-          console.log(saving);
-          await fetch(`https://api.baserow.io/api/database/rows/table/173457/${user.id}/?user_field_names=true`, {
-          method:"PATCH",
-          headers: {
-            "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            "moneyBox" : Number(user.moneyBox) + saving,
-            "counter" : Number(0)
-          })
-          })
-          .then(response => response.json())
-          .then( result => localStorage.setItem("user",JSON.stringify(result)));
-          }
-      });
+      // call the function to increment the money box each day regarding the daily counter
+      runAtSpecificTimeOfDay(0,1,fillMoneyBox());
       
       //function to run a specific function at a specific time of day
       function runAtSpecificTimeOfDay(hour, minutes, func) {
@@ -93,13 +74,25 @@ window.onload = () => {
 
 
 
-//  //function to fill the money box if the user smoked less sticks than he used to.
-//  function fillMoneyBox(user) {
-//   if (user.counter <= user.limit) {
-//       saving = (user.limit-user.counter)*0.58;
-//       user.moneyBox += Math.round(saving);
-//       document.getElementById("moneyBox").innerText = user.moneyBox;
-//       console.log(user.moneyBox);
-//   }
-// }
+ //function to fill the money box if the user smoked less sticks than he used to.
+ async function fillMoneyBox() {
+    let saving = 0;
+    if (Number(user.counter) <= Number(user.nbOfSticks)) {
+      saving = Math.round((Number(user.nbOfSticks)-Number(user.counter))*0.58);
+      console.log(saving);
+      await fetch(`https://api.baserow.io/api/database/rows/table/173457/${user.id}/?user_field_names=true`, {
+      method:"PATCH",
+      headers: {
+        "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "moneyBox" : Number(user.moneyBox) + saving,
+        "counter" : Number(0)
+      })
+      })
+      .then(response => response.json())
+      .then( result => localStorage.setItem("user",JSON.stringify(result)));
+      }
+}
 
