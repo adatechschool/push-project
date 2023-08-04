@@ -1,5 +1,3 @@
-
-
 window.onload = () => {
 
       let user = JSON.parse(localStorage.getItem("user"));

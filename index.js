@@ -16,7 +16,8 @@ async function createAccount() {
       "counter" : 0
     })
   })
-    .then( response => response.json())
+    .then( response => response.json());
+    localStorage.clear();
     localStorage.setItem("user",JSON.stringify(user));
     document.location.href="main.html"
 }
@@ -33,6 +34,7 @@ async function connexion () {
       })
         .then(response => response.json())
         .then(result => result.results[0])
+        localStorage.clear();
         localStorage.setItem("user",JSON.stringify(user));
         document.location.href="main.html"
 }
