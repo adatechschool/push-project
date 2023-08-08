@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Added padding and border for visualisation whilst styling/constructing */
+div {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5a124; 
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Want the banner to occupy the full width of screen, grey to see it, border "none" to remove the border*/
+.projectBanner {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+/* adjust logo size */
+.logo {
+  width: 25%;
+}
+
+/* border "none" to remove the border*/
+.jackpot {
+  border: none;
+}
+
+.userName {
+  font-size: 30px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-style: none;
+}
+/* border "none" to remove the border*/
+.parameters {
+  color:white;
+  margin-top: -70px;
+  margin-left: -20px;
+  display:flex;
+  font-size: 20px;
+  border-style: none;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.parameters div {
+  margin-top: -20px;
+  border-style: none;
+  font-size: 30px;
+}
+
+.parameters div p {
+  margin-top: -30px;
+  display : flex;
+  justify-content: center;
+  color:white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+
+
+/* Sample styling for buttons, just placeholder for now but serves as a basis for later */
+.button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button:active {
+  background-color: #3e8e41;
+}
+
+.button:focus {
+  outline: none;
+}
+
+#counterBtn {
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  color: black;
+  font-size: 120px;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: #D9D9D9;
+}
+
+.ellipse1 {
+  margin-left: 48px;
+  margin-top:-50px;
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  width: 250px;
+height: 250px;
+border-radius: 100%;
+background: #6D5623;
+}
+
+.ellipse2 {
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+background: #313123;
+}
+
+.ellipse3 {
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background: #141F23;
+}
+
+#reductionBtn {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display : flex;
+  color: black;
+  font-size: 50px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: #D9D9D9;
+}
+
+.ellipse4 {
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  width: 100px;
+height: 100px;
+border-radius: 100%;
+background: #6D5623;
+}
+
+.ellipse5 {
+  align-items: center;
+  justify-content: center;
+  display : flex;
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+background: #313123;
+}
+
+.navigation {
+  display:flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size:30px;
+  color:black;
+  border: 5px solid #000;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+
+/* CSS for authentifcation page */
+
+.form {
+  text-align: center;
+  color:black;
+  border: none;
+}
+
+#signup {
+  margin-top: 30px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+#login {
+  margin-top: 40px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+.field-wrap {
+  display: flex;
+  border: none;
+}
+
+input {
+  margin-top: -20px;
+  display: flex;
+  background-color: #f4efe6;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height:30px;
+  align-items: center;
+}
+
+.loginButton {
+  margin-right: -190px;
+  width: 100px;
+  background-color: #e5a124;
+  border-color: #f4efe6;
+  border-radius: 5px;
+  height: 30px;
+}
+
