@@ -74,21 +74,23 @@ body {
     background: #6d5623;
 }
 
-.ellipse1::before,
+/* .ellipse1::before,
 .ellipse2::before,
 .ellipse3::before,
 .ellipse4::before,
-.ellipse5::before {
+.ellipse5::before,
+#counterBtn::before {
   content: "";
   display: block;
   padding-bottom: 100%;
-}
+} */
 
 .ellipse2 {
   align-items: center;
   justify-content: center;
   display: flex;
   width: 80%;
+  height: 80%;
   border-radius: 50%;
   background: #313123;
 }
@@ -98,6 +100,7 @@ body {
   justify-content: center;
   display: flex;
   width: 80%;
+  height: 80%;
   border-radius: 50%;
   background: #141f23;
 }
@@ -177,8 +180,4 @@ body {
   border-radius: 50%;
 }
 
-.navigation::before {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
+
