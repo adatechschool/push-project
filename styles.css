@@ -13,7 +13,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.25fr 0.25fr 0.5fr 1fr 1fr;
-  height: 100vh;
 }
 .projectBanner {
   display: flex;
