@@ -39,36 +39,38 @@ body {
   font-size: 30px;
 }
 
+.userName h2 {
+    margin:5%;
+  }
+
 .parameters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   grid-column-start: span 3;
   background-color: var(--mainColor);
-  font-size: 30px;
-  height: 3em;
 }
 
 .parameters h3 {
-    margin:0%;
+    font-size: 35px;
+    margin-bottom: 5%;
   }
 
 .parameters p {
   text-align: center;
   font-size: 50px;
-  margin: 0%;
+  margin: 0 0% 0 0%;
 }
 
 .ellipse1 {
-  grid-column-start: 2;
-  grid-row-start: 4;
+  grid-column-start: span 4;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  width: 200%;
-  margin-left: -50%;
+  width: 70%;
   border-radius: 50%;
   background: #6d5623;
+  margin: auto;
 }
 
 .ellipse1::before,
@@ -160,7 +162,10 @@ body {
     grid-column-start: 3;
     grid-row-start: 5;
     align-items: end;
+    justify-content:end;
     display: flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 .navigation {
   display: flex;
@@ -173,7 +178,8 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-left: 25px;
+
+
 }
 
 .navigation::before {
