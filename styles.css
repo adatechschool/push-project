@@ -75,7 +75,11 @@ body {
 
 .ellipse1::before,
 .ellipse2::before,
-.ellipse3::before {
+.ellipse3::before,
+#counterBtn::before,
+.ellipse4::before,
+.ellipse5::before,
+#reductionBtn::before {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -106,8 +110,8 @@ body {
   color: black;
   font-size: 6rem;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70%;
+  height: 70%;
   background-color: #d9d9d9;
   border: none;
 }
@@ -140,22 +144,14 @@ body {
 #reductionBtn {
   align-items: center;
   justify-content: center;
-  text-align: center;
   display: flex;
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60%;
+  height:60%;
   background-color: #d9d9d9;
   border: none;
-}
-
-.ellipse4::before,
-.ellipse5::before {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
 }
 
 .cagnotte {
