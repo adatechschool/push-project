@@ -67,7 +67,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background: #6d5623;
   margin: auto;
@@ -90,6 +91,7 @@ body {
   justify-content: center;
   display: flex;
   width: 80%;
+  height: 80%;
   border-radius: 50%;
   background: #313123;
 }
@@ -99,6 +101,7 @@ body {
   justify-content: center;
   display: flex;
   width: 80%;
+  height: 80%;
   border-radius: 50%;
   background: #141f23;
 }
@@ -111,6 +114,7 @@ body {
   font-size: 6rem;
   border-radius: 50%;
   width: 70%;
+  height: 70%;
   background-color: #d9d9d9;
   border: none;
 }
