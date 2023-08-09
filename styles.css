@@ -63,7 +63,8 @@ body {
 }
 
 .ellipse1 {
-  grid-column-start: span 4;
+  grid-column-start: 2;
+  grid-row-start: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,20 +120,33 @@ body {
   border: none;
 }
 
+#reductionBtn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 60%;
+    height:60%;
+    background-color: #d9d9d9;
+    border: none;
+  }
 
-.ellipse4 {
-  margin-left: 5px;
-  grid-column-start: 1;
-  grid-row-start: 5;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #6d5623;
-  margin-bottom: 5px;
-}
+  .ellipse4 {
+    margin-left: 5px;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #6d5623;
+    margin-bottom: 5px;
+  }
+
 
 .ellipse5 {
   align-items: center;
@@ -144,18 +158,7 @@ body {
   background: #313123;
 }
 
-#reductionBtn {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  color: black;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  width: 60%;
-  height:60%;
-  background-color: #d9d9d9;
-  border: none;
-}
+
 
 .cagnotte {
     grid-column-start: 3;
