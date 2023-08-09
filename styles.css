@@ -2,14 +2,73 @@
   --mainColor: #e5a124;
 }
 
+
+/* CSS for authentifcation page */
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--mainColor);
   font-family: 'Teko', sans-serif;
+  align-items: center;
+  background-color: var(--mainColor);
+  justify-content: center;
+  padding: 1rem;
 }
 
-.container {
+.form {
+  text-align: center;
+  color:black;
+  border: none;
+  padding: 1rem;
+}
+
+#signup {
+  margin-top: 30px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+}
+
+#login {
+  margin-top: 40px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+}
+
+.field-wrap {
+  display: flex;
+  border: none;
+  padding: 1rem;
+}
+
+input {
+  margin-top: -20px;
+  display: flex;
+  background-color: #f4efe6;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height:30px;
+  align-items: center;
+}
+
+.loginButton {
+  width: 100px;
+  background-color: #e5a124;
+  border-color: #f4efe6;
+  border-radius: 5px;
+  height: 30px;
+}
+
+
+/* CSS for main page */
+
+.containerMain {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.25fr 0.25fr 0.5fr 1fr 1fr;
