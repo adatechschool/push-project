@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="styles.css" />
         <title>Projet Mehdi-Bradley-Quentin</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
         <script src="reward.js"></script>
     </head>
 
@@ -17,9 +20,8 @@
                 <h1>Ma cagnotte</h1>
                 <h2><span id = "moneyBox">0</span> € économisés depuis le début</h2>
             </div>
-            <br>
+            <canvas class="chart" id="chart"></canvas>
             <button class="navigation"><a href="index.html" style="text-decoration:none">+</a></button>
-            
         </div>
         
     </body>

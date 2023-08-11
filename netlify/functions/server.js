@@ -11,6 +11,20 @@ const handler = async function (event, context) {
   let result = await response.json();
   let users = await result.results;
   for (const user of users) {
+           //function to create a new conso for an user and store it in baserow
+          await fetch("https://api.baserow.io/api/database/rows/table/187499/?user_field_names=true", {
+            method:"POST",
+            headers: {
+              "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              "idUser": [user.idUser],
+              "Date": yesterdayDate().toISOString(),
+              "dailyConsumption": Number(user.counter)
+              })
+          })
+          
           let saving = 0;
           if (Number(user.counter) <= Number(user.nbOfSticks)) {
           saving = Math.round((Number(user.nbOfSticks)-Number(user.counter))*0.58);
