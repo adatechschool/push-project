@@ -8,28 +8,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-        <script src="reward.js"></script>
+        <script src="histo.js"></script>
     </head>
 
     <body>
         <div class="container">
             <div class="projectBanner">
                 <img class="logo" src="img/LogoProjetPush.png">
-              </div>
-              <nav>
-                <label for="toggle">☰</label>
-                <input type="checkbox" id="toggle">
-                <div class="main_pages">
-                    <a href="index.html">Connexion</a>
-                    <a href="main.html">Push !</a>
-                    <a href="reward.html">Cagnotte</a>
-                    <a href="histo.html">Historique</a>
-                </div>
-              </nav>
-            <div class="jackpot">
-                <h1>Ma cagnotte</h1>
-                <h2><span id = "moneyBox">0</span> € économisés depuis le début</h2>
             </div>
+            <nav>
+            <label for="toggle">☰</label>
+            <input type="checkbox" id="toggle">
+            <div class="main_pages">
+                <a href="index.html">Connexion</a>
+                <a href="main.html">Push !</a>
+                <a href="reward.html">Cagnotte</a>
+                <a href="histo.html">Historique</a>
+            </div>
+            </nav>
+            <canvas class="chart" id="chart"></canvas>
         </div>
         
     </body>

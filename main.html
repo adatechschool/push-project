@@ -12,10 +12,20 @@
     <script src="./main.js"></script>   
   </head>
   <body>
-    <div class="containerMain">
+    <div class="container">
       <div class="projectBanner">
         <img class="logo" src="img/LogoProjetPush.png" />
       </div>
+      <nav>
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">
+        <div class="main_pages">
+            <a href="index.html">Connexion</a>
+            <a href="main.html">Push !</a>
+            <a href="reward.html">Cagnotte</a>
+            <a href="histo.html">Historique</a>
+        </div>
+      </nav>
       <div class="userName">
         <h2 id="userName">Coucou !</h2>
       </div>
@@ -43,12 +53,13 @@
             <button id="reductionBtn"><i class="fa-solid fa-minus"></i></button>
         </div>
       </div>
-      
+      <!--
       <div class="cagnotte">
       <button class="navigation">
         <a href="reward.html" style="text-decoration: none; color:black"><i class="fa-solid fa-piggy-bank"></i></a>
       </button>
       </div>
+    -->
     </div>
   </body>
 </html>
