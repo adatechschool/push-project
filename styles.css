@@ -5,7 +5,7 @@
 /* navbar */ 
 nav 
 {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 50%;
     height: 100px;
     background: #e5a124;
@@ -50,13 +50,14 @@ label, #toggle
     nav .main_pages 
     {
         display: none;
-        position: fixed;
+        position: absolute;
         text-align: center;
         flex-direction: column;
         background: #48435C;
-        height: 140px;
-        width: 100px;
-        margin-left: 0%;
+        height: 180px;
+        width: 150px;
+        margin-left: -5%;
+        font-size: 30px;
     }
  
     nav .main_pages a {
@@ -148,7 +149,7 @@ input {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.25fr 0.5fr 1fr 1fr;
+  grid-template-rows: 0.25fr 0.25fr 0.5fr 1fr;
 }
 .projectBanner {
   display: flex;
@@ -157,12 +158,14 @@ input {
   grid-column: 2;
   background-color: var(--mainColor);
   border-bottom: 2px solid;
+  margin: 0;
 }
 
 /* adjust logo size */
 .logo {
   width: 35%;
   min-width: 100px;
+  margin: 0
 }
 
 .userName {
@@ -295,17 +298,9 @@ input {
 
 
 
-.cagnotte {
-    grid-column-start: 3;
-    grid-row-start: 5;
-    align-items: center;
-    justify-content:center;
-    display: flex;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
 .jackpot {
   grid-column: span 3;
+  text-align: center;
 }
 
 .chart {
