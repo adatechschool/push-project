@@ -21,20 +21,20 @@ window.onload = async () => {
           },
           plugins: {
             datalabels: {
-              color: '#fff',
+              color: '#e5a124',
             }
           }
         };
 
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
         labels: datas[0],
         datasets: [{
             label: 'Ma conso quotidienne',
             data: datas[1],
             fill: false,
-            borderColor: '#fff',
+            borderColor: '#e5a124',
             tension: 0.1
           }]
         },
@@ -57,7 +57,7 @@ async function getConso (userId) {
     let labelForGraph = [];
     let dataForGraph = [];
     for (const conso of consoById) {
-        let label = conso.Date;
+        let label = conso.Date.slice(0,10);
         let data = Number(conso.dailyConsumption);
         labelForGraph.push(label);
         dataForGraph.push(data);
