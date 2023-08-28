@@ -10,8 +10,10 @@ const handler = async function (event, context) {
   })
   let result = await response.json();
   let users = await result.results;
-  let date = new Date();
-  let yesterdayDate = date.setDate(date.getDate() - 1);
+  console.table(users);
+  let yesterdayDate = new Date();
+  yesterdayDate.setDate(new Date().getDate() - 1);
+  console.log(yesterdayDate);
   for (const user of users) {
            //function to create a new conso for an user and store it in baserow
           await fetch("https://api.baserow.io/api/database/rows/table/187499/?user_field_names=true", {
@@ -21,8 +23,8 @@ const handler = async function (event, context) {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              "idUser": [user.idUser],
-              "Date": yesterdayDate().toISOString(),
+              "idUser": [user.id],
+              "Date": yesterdayDate.toISOString(),
               "dailyConsumption": Number(user.counter)
               })
           })
@@ -49,7 +51,6 @@ const handler = async function (event, context) {
     body: JSON.stringify({ message: "la base de donnees est a jour" }),
   };
 };
-
 
 exports.handler = schedule("@daily", handler);
 
