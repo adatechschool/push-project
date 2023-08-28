@@ -10,6 +10,8 @@ const handler = async function (event, context) {
   })
   let result = await response.json();
   let users = await result.results;
+  let date = new Date();
+  let yesterdayDate = date.setDate(date.getDate() - 1);
   for (const user of users) {
            //function to create a new conso for an user and store it in baserow
           await fetch("https://api.baserow.io/api/database/rows/table/187499/?user_field_names=true", {
