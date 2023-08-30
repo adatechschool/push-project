@@ -3,40 +3,21 @@ window.onload = async () => {
     let user = JSON.parse(localStorage.getItem("user"));
 
     let datas = await getConso(user.idUser);
-    var ctx = document.getElementById("chart").getContext('2d');
+    let ctx = document.getElementById("chart").getContext('2d');
     
-    var options = {
-        title: {
-          display: true,
-          text: "Ta conso au quotidien"
-        },
-        legend: {
-          position: 'bottom',
-        },
-          tooltips: {
-            enabled: true
-          },
-          plugins: {
-            datalabels: {
-              color: '#e5a124',
-            }
-          }
-        };
 
-    var myChart = new Chart(ctx, {
+    
+    let myChart = new Chart(ctx, {
         type: 'bar',
         data: {
         labels: datas[0],
         datasets: [{
             label: 'Ma conso quotidienne',
             data: datas[1],
-            fill: false,
-            borderColor: '#e5a124',
-            tension: 0.1
+            borderColor: '#e5a124'
           }]
-        },
+        }
     });
-
 }
 
 async function getConso (userId) {
@@ -55,7 +36,7 @@ async function getConso (userId) {
     let dataForGraph = [];
     for (const conso of consoById) {
         let label = conso.Date.slice(0,10);
-        let data = Number(conso.dailyConsumption);
+        let data = parseInt(conso.dailyConsumption);
         labelForGraph.push(label);
         dataForGraph.push(data);
     }

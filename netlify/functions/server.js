@@ -31,7 +31,7 @@ const handler = async function (event, context) {
           
           let saving = 0;
           if (Number(user.counter) <= Number(user.nbOfSticks)) {
-          saving = Math.round((Number(user.nbOfSticks)-Number(user.counter))*0.58);
+          saving = Math.round((Number(user.nbOfSticks)-Number(user.counter))*0.58*100)/100;
           await fetch(`https://api.baserow.io/api/database/rows/table/173457/${user.id}/?user_field_names=true`, {
           method:"PATCH",
           headers: {
