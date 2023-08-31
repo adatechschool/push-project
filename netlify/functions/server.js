@@ -45,6 +45,19 @@ const handler = async function (event, context) {
           })
           .then(response => response.json());
           }
+          else {
+            await fetch(`https://api.baserow.io/api/database/rows/table/173457/${user.id}/?user_field_names=true`, {
+          method:"PATCH",
+          headers: {
+          "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
+          "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+          "counter" : Number(0)
+          })
+          })
+          .then(response => response.json());
+          }
       }
   return {
     statusCode: 200,
