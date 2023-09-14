@@ -1,6 +1,6 @@
 window.onload = async () => {
 
-    let user = JSON.parse(localStorage.getItem("user"));
+    let user = JSON.parse(sessionStorage.getItem("user"));
 
     let datas = await getConso(user.idUser);
     let ctx = document.getElementById("chart").getContext('2d');
