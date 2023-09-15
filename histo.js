@@ -4,17 +4,17 @@ window.onload = async () => {
 
     let datas = await getConso(user.idUser);
     let ctx = document.getElementById("chart").getContext('2d');
-    
 
     
     let myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
         labels: datas[0],
         datasets: [{
             label: 'Ma conso quotidienne',
             data: datas[1],
-            borderColor: '#e5a124'
+            borderColor: 'white',
+
           }]
         }
     });
