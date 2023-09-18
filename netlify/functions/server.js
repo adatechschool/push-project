@@ -1,4 +1,10 @@
 const { schedule } = require("@netlify/functions");
+const express = require ('express')
+const bcrypt = require('bcrypt')
+
+const salt = await genSalt()
+const hashedPassword = await hash("password", salt)
+console.log(hashedPassword)
 
 const handler = async function (event, context) {
   // your server-side functionality

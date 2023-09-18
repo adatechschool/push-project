@@ -1,5 +1,9 @@
+
+
 //function to create a new user and store it in baserow
 async function createAccount() {
+
+
   let user = await fetch("https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true", {
     method:"POST",
     headers: {
@@ -10,7 +14,7 @@ async function createAccount() {
     body: JSON.stringify({
       "name": document.getElementById("name").value,
       "email": document.getElementById("email").value,
-      "password": document.getElementById("password").value,
+      "password": hashedPassword,
       "nbOfSticks": document.getElementById("nbOfSticks").value,
       "moneyBox" : 0,
       "counter" : 0

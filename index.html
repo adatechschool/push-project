@@ -4,74 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Push</title>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-  <div class="container">
-    <div class="projectBanner">
-      <img class="logo" src="img/LogoProjetPush.png" />
-    </div>
-    <nav>
-      <label for="toggle">☰</label>
-      <input type="checkbox" id="toggle">
-      <div class="main_pages">
+    <div class="container">
+      <div class="projectBanner">
+        <img class="logo" src="img/LogoProjetPush.png" />
+      </div>
+      <nav>
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle" />
+        <div class="main_pages">
           <a href="index.html">Connexion</a>
           <a href="main.html">Push !</a>
           <a href="reward.html">Cagnotte</a>
           <a href="histo.html">Historique</a>
+        </div>
+      </nav>
+      <div class="form">
+        <div id="signup">
+          <h1>Inscris-toi, c'est gratuit !</h1>
+
+          <form>
+            <div class="field-wrap">
+              <input type="text" id="name" placeholder="nom" />
+            </div>
+
+            <div class="field-wrap">
+              <input type="email" id="email" placeholder="email" />
+            </div>
+
+            <div class="field-wrap">
+              <input
+                type="text"
+                required
+                autocomplete="off"
+                id="password"
+                placeholder="mot de passe"
+              />
+            </div>
+
+            <div class="field-wrap">
+              <input
+                type="number"
+                id="nbOfSticks"
+                placeholder="combien de cigarettes fumes-tu par jour ?"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="loginButton"
+              onclick="createAccount();"
+            >
+              Get Started
+            </button>
+          </form>
+        </div>
+
+        <div id="login">
+          <h1>Welcome Back !</h1>
+
+          <form>
+            <div class="field-wrap">
+              <input
+                id="connexionEmail"
+                name="connexionEmail"
+                type="text"
+                placeholder="email"
+              />
+            </div>
+
+            <div class="field-wrap">
+              <input
+                id="connexionPassword"
+                name="connexionPassword"
+                type="text"
+                placeholder="mot de passe"
+              />
+            </div>
+
+            <button
+              id="connexionBtn"
+              type="button"
+              class="loginButton"
+              onclick="connexion();"
+            >
+              Log in
+            </button>
+          </form>
+        </div>
       </div>
-    </nav>
-    <div class="form">
-            <div id="signup">   
-              <h1>Inscris-toi, c'est gratuit !</h1>
-              
-              <form>
-            
-              <div class="field-wrap">
-                <input type="text" id="name" placeholder="nom">
-              </div>
-
-              <div class="field-wrap">
-                <input type="email" id="email" placeholder="email">
-              </div>
-              
-              <div class="field-wrap">
-                <input type="text"required autocomplete="off" id="password" placeholder="mot de passe">
-              </div>
-
-              <div class="field-wrap">
-                <input type="number" id="nbOfSticks" placeholder="combien de cigarettes fumes-tu par jour ?"/>
-              </div>
-              
-              <button  type="button" class="loginButton" onclick="createAccount();">Get Started</button>
-              
-              </form>
-
-            </div>
-            
-            <div id="login">   
-              <h1>Welcome Back !</h1>
-              
-              <form>
-              
-              <div class="field-wrap">
-                <input id="connexionEmail" name="connexionEmail" type="text" placeholder="email"/>
-              </div>
-              
-              <div class="field-wrap">
-                <input id="connexionPassword" name="connexionPassword" type="text" placeholder="mot de passe"/>
-              </div>
-
-              <button id="connexionBtn" type="button" class="loginButton" onclick="connexion();">Log in</button>
-              
-              </form>
-
-            </div>
-    </div> <!-- /form -->
-  </div>
-</body>
+      <!-- /form -->
+    </div>
+  </body>
 </html>
