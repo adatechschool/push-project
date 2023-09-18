@@ -122,6 +122,7 @@ body {
 
 .field-wrap {
   display: flex;
+  justify-content: center;
   border: none;
   padding: 1rem;
 }
@@ -309,3 +310,61 @@ input {
   grid-column: span 3;
 }
 
+
+/* rewards */ 
+
+.todo-app {
+  align-items: center;
+  background: #fff;
+  opacity: 0.8;
+  padding: 15px 15px;
+  border-radius: 10px;
+  color: black;
+}
+
+.todo-app h2 {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ul li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 15px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(banque_image/radio.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}

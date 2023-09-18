@@ -17,7 +17,6 @@ async function createAccount() {
     })
   })
     .then( response => response.json());
-    sessionStorage.clear();
     sessionStorage.setItem("user",JSON.stringify(user));
     document.location.href="main.html"
 }
@@ -34,7 +33,6 @@ async function connexion () {
       })
         .then(response => response.json())
         .then(result => result.results[0])
-        sessionStorage.clear();
         sessionStorage.setItem("user",JSON.stringify(user));
         document.location.href="main.html"
 }
