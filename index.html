@@ -11,7 +11,9 @@
       rel="stylesheet"
     />
     <title>Push</title>
-    <script type="module" src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js" integrity="sha512-BJZhA/ftU3DVJvbBMWZwp7hXc49RJHq0xH81tTgLlG16/OkDq7VbNX6nUnx+QY4bBZkXtJoG0b0qihuia64X0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -60,9 +62,9 @@
             </div>
 
             <button
+              id="loginButton"
               type="button"
               class="loginButton"
-              onclick="createAccount();"
             >
               Get Started
             </button>
@@ -95,7 +97,6 @@
               id="connexionBtn"
               type="button"
               class="loginButton"
-              onclick="connexion();"
             >
               Log in
             </button>
