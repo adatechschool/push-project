@@ -25,24 +25,11 @@ async function createAccount() {
     })
       .then( response => response.json());
       sessionStorage.setItem("user",JSON.stringify(user));
-      //document.location.href="main.html"
+      document.location.href="main.html"
 }
 
 //function to log in
 async function connexion() {
-  // let email = document.getElementById("connexionEmail").value;
-  // let password = document.getElementById("connexionPassword").value;
-  // let user = await fetch(`https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true&filter__field_1154427__equal=${email}&filter__field_1195631__equal=${password}`, {
-  //   method: "GET",
-  //   headers: {
-  //     "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
-  //   },
-  // })
-  //   .then((response) => response.json())
-  //   .then((result) => result.results[0]);
-
-  // sessionStorage.setItem("user", JSON.stringify(user));
-  // document.location.href = "main.html";
   const email = document.getElementById("connexionEmail").value;
   const enteredPassword = document.getElementById("connexionPassword").value;
   const user = await fetch(`https://api.baserow.io/api/database/rows/table/173457/?user_field_names=true&filter__field_1154427__equal=${email}`, {
@@ -54,7 +41,6 @@ async function connexion() {
       .then((response) => response.json())
       .then((result) => result.results[0]);
   const storedHashedPassword = user.password;
-  console.log(storedHashedPassword);
   // Convert the entered password to a Uint8Array
   const encoder = new TextEncoder();
   const data = encoder.encode(enteredPassword);
@@ -76,6 +62,7 @@ async function connexion() {
   } else {
     // Authentication failed
     console.log("Authentication failed");
+    alert("Mot de passe éronné");
     // Handle authentication failure (e.g., display an error message)
   }
 }
