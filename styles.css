@@ -329,42 +329,24 @@ input {
   justify-content: center;
 }
 
+#list {
+  display: block;
+  grid-column-start: span 3;
+  padding-inline-start: 0px;
+}
 
-ul li {
+
+li {
+  justify-content: center;
   list-style: none;
   font-size: 1rem;
-  padding: 15px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  position: relative;
-}
-
-ul li::before {
-  content: '';
-  position: absolute;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background-image: url(banque_image/radio.png);
-  background-size: cover;
-  background-position: center;
-  top: 12px;
-  left: 8px;
-}
-
-ul li span {
-  position: absolute;
-  right: 0;
-  top: 3px;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  color: #555;
-  line-height: 40px;
+  background-color: #f4efe6;
+  margin-top: 20px;
+  background-color: white;
+  align-items: center;
   text-align: center;
-  border-radius: 50%;
-}
-
-ul li span:hover {
-  background: #edeef0;
+  border-radius: 5px;
+  border: none;
 }

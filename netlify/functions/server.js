@@ -40,6 +40,7 @@ const handler = async function (event, context) {
             },
             body: JSON.stringify({
             "moneyBox" : Number(user.moneyBox) + saving,
+            "remainingMoney" : Number(user.remainingMoney) + saving,
             "counter" : Number(0)
             })
             })
