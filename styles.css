@@ -32,7 +32,7 @@ nav .main_pages a
  
 nav a:hover 
 {
-    background: #5A5766
+    background: black
 }
 
 label, #toggle
@@ -53,11 +53,11 @@ label, #toggle
         position: absolute;
         text-align: center;
         flex-direction: column;
-        background: #48435C;
+        background: #e5a124;
         height: 180px;
         width: 150px;
-        margin-left: -5%;
         font-size: 30px;
+        margin-left: -7%;
     }
  
     nav .main_pages a {
@@ -111,7 +111,7 @@ body {
 }
 
 #login {
-  margin-top: 40px;
+  margin-top: 10px;
   background-color: white;
   align-items: center;
   text-align: center;
@@ -152,7 +152,7 @@ input {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.25fr 0.5fr 1fr;
+  margin-top: -7%;
 }
 .projectBanner {
   display: flex;
@@ -161,14 +161,11 @@ input {
   grid-column: 2;
   background-color: var(--mainColor);
   border-bottom: 2px solid;
-  margin: 0;
 }
 
 /* adjust logo size */
 .logo {
-  width: 35%;
-  min-width: 100px;
-  margin: 0
+  height: 7em;
 }
 
 .userName {
@@ -181,7 +178,7 @@ input {
 }
 
 .userName h2 {
-    margin:5%;
+    margin:3%;
   }
 
 .parameters {
@@ -308,6 +305,7 @@ input {
 
 .chart {
   grid-column: span 3;
+  margin-top: 15%;
 }
 
 
@@ -330,23 +328,31 @@ input {
 }
 
 #list {
-  display: block;
+  display: grid;
   grid-column-start: span 3;
-  padding-inline-start: 0px;
+  grid-template-columns: repeat(auto-fill,minmax(120px ,1fr));
+  margin-left: -7%;
 }
 
 
 li {
   justify-content: center;
   list-style: none;
-  font-size: 1rem;
+  font-size:large;
   user-select: none;
   cursor: pointer;
   background-color: #f4efe6;
-  margin-top: 20px;
+  margin-right: 1em;
+  margin-bottom: 1em;
   background-color: white;
   align-items: center;
   text-align: center;
   border-radius: 5px;
   border: none;
+}
+
+.rewards {
+  grid-column: span 3;
+  text-align: center;
+  margin-top: 1em;
 }

@@ -5,6 +5,8 @@ window.onload = async () => {
     document.getElementById("moneyBox").innerText = user.moneyBox;
     document.getElementById("remainingMoney").innerText = user.remainingMoney;
 
+    await displayRewards();
+
     const addButton = document.getElementById("Add");
 
 
@@ -17,7 +19,6 @@ window.onload = async () => {
         } else {
             console.log(inputName, inputPrice);
             await saveReward(inputName,inputPrice);
-            await displayRewards();
             inputName.value = "";
             inputPrice.value = "";
         }
@@ -76,7 +77,7 @@ window.onload = async () => {
       let listContainer = document.getElementById("list")
       for (const reward of rewards) {
         let item = document.createElement('li');
-        item.innerHTML = reward.name + reward.price;
+        item.innerHTML = reward.name + " - " + reward.price + "€";
         listContainer.appendChild(item);
       }
     }
