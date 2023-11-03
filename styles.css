@@ -356,3 +356,17 @@ li {
   text-align: center;
   margin-top: 1em;
 }
+
+.deleteRewardButton {
+  margin-bottom: 1em;
+  color: red;
+}
+
+.rewardDescription {
+  font-size: auto;
+  margin-bottom: 0;
+}
+
+.reward {
+  display: block;
+}
