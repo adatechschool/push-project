@@ -21,11 +21,9 @@ window.onload = async () => {
   addButton.addEventListener("click", async () => {
     const inputName = document.getElementById("input-name").value;
     const inputPrice = document.getElementById("input-price").value;
-    console.log(inputName, inputPrice);
     if (inputName.value === '' || inputPrice.value === '') {
       alert("Entre des valeurs avant de cliquer !");
     } else {
-      console.log(inputName, inputPrice);
       await saveReward(inputName, inputPrice);
       inputName.value = "";
       inputPrice.value = "";
@@ -36,6 +34,7 @@ window.onload = async () => {
   async function saveReward(name, value) {
     if (Number(value) < Number(user.moneyBox)) {
       //ajout de la dépense dans la table
+      const formattedPrice = Number(value).toFixed(2);
       await fetch("https://api.baserow.io/api/database/rows/table/197556/?user_field_names=true", {
         method: "POST",
         headers: {
@@ -44,14 +43,16 @@ window.onload = async () => {
           "Accept": "application/json",
         },
         body: JSON.stringify({
-          "price": Number(value),
+          "price": Number(formattedPrice),
           "idUser": [
             user.id
           ],
           "name": name
         })
       });
+
       // mise à jour de la cagnotte
+      const formattedRemainingMoney = Number(user.remainingMoney).toFixed(2);
       await fetch(`https://api.baserow.io/api/database/rows/table/173457/${user.id}/?user_field_names=true`, {
         method: "PATCH",
         headers: {
@@ -59,18 +60,7 @@ window.onload = async () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          "remainingMoney": Number(user.remainingMoney) - Number(value)
-        })
-      });
-      //mise à jour de la session
-      await fetch(`https://api.baserow.io/api/database/rows/table/173457/${JSON.parse(sessionStorage.getItem("user")).id}/?user_field_names=true`, {
-        method: "PATCH",
-        headers: {
-          "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          "remainingMoney": Number(user.remainingMoney) - Number(value)
+          "remainingMoney":  Number(formattedRemainingMoney) - Number(formattedPrice)
         })
       })
         .then(response => response.json())
@@ -122,9 +112,13 @@ window.onload = async () => {
       headers: {
         "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
       }
-    }).then( result => result.json());
+    }).then(result => result.json());
     //stocker le montant du reward à suprimer
     let amountToDelete = await response.price;
+
+    //formatter les inputs pour les requetes
+    const formattedAmountToDelete = Number(amountToDelete).toFixed(2);
+    console.log(formattedAmountToDelete);
     //supprimer le reward de la bdd
     await fetch(`https://api.baserow.io/api/database/rows/table/197556/${rewardId}/`, {
       method: "DELETE",
@@ -132,7 +126,7 @@ window.onload = async () => {
         "Authorization": "Token x2iRlrA7czwFxbDMWj2v8wAzMhi0DLK4",
       }
     });
-    //mise à jour de la session
+    const formattedRemainingMoney = Number(user.remainingMoney).toFixed(2);    //mise à jour de la session
     await fetch(`https://api.baserow.io/api/database/rows/table/173457/${JSON.parse(sessionStorage.getItem("user")).id}/?user_field_names=true`, {
       method: "PATCH",
       headers: {
@@ -140,7 +134,7 @@ window.onload = async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        "remainingMoney": Number(user.remainingMoney) + Number(amountToDelete)
+        "remainingMoney": Number(formattedRemainingMoney) + Number(formattedAmountToDelete)
       })
     })
       .then(response => response.json())
