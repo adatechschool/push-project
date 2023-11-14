@@ -60,7 +60,7 @@ window.onload = async () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          "remainingMoney":  Number(formattedRemainingMoney) - Number(formattedPrice)
+          "remainingMoney": Number(formattedRemainingMoney) - Number(formattedPrice)
         })
       })
         .then(response => response.json())
@@ -139,6 +139,7 @@ window.onload = async () => {
     })
       .then(response => response.json())
       .then(result => sessionStorage.setItem("user", JSON.stringify(result)));
+      console.log(sessionStorage.getItem("user"));
     location.reload();
   }
 
