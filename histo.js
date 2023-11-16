@@ -43,7 +43,7 @@ async function getConso(userId) {
     let result = await response.json();
     let newPage = result.results || [];
     consos = [...consos, ...newPage];
-    if (newPage.length < 100) {
+    if (result.next === null) {
       stopCondition = true;
     }
     pageNumber++;
