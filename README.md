@@ -30,7 +30,7 @@ Push is deployed and hosted on Netlify.
 
 ## Usage
 
-Go to https://lively-muffin-5ae3e6.netlify.app/ on your smatphone.
+Go to https://lively-muffin-5ae3e6.netlify.app/ on your smartphone.
 
 Create an account.
 
